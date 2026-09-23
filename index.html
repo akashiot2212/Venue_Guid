@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZYNERA-26 symposium programme, venues, and coordinators." />
+    <title>ZYNERA-26 | Venue Guide</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b1f3a'/%3E%3Cpath d='M17 15h30L26 49h21' fill='none' stroke='%23ffcc4d' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+      :root {
+        --navy: #091d38;
+        --blue: #104a92;
+        --ink: #14233a;
+        --muted: #68758a;
+        --paper: #f6f8fc;
+        --white: #ffffff;
+        --line: #dce3ee;
+        --yellow: #ffcb45;
+        --orange: #f77740;
+        --technical: #1b68c4;
+        --nontechnical: #a84097;
+        --shadow: 0 18px 45px rgba(13, 36, 70, .12);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: Manrope, Arial, sans-serif; }
+      button, input { font: inherit; }
+      button { cursor: pointer; }
+      .shell { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+
+      .hero {
+        position: relative; overflow: hidden; padding: 28px 0 52px; color: white;
+        background: radial-gradient(circle at 84% 12%, rgba(255,203,69,.28), transparent 19rem), linear-gradient(122deg, #07172d 0%, #0b3268 62%, #07548e 100%);
+      }
+      .hero::after { content: ''; position: absolute; inset: auto -6rem -14rem auto; width: 29rem; height: 29rem; border: 34px solid rgba(255,255,255,.09); border-radius: 50%; }
+      .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; position: relative; z-index: 1; }
+      .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .08em; }
+      .brand-mark { display: grid; place-items: center; width: 37px; height: 37px; border: 2px solid var(--yellow); border-radius: 11px; color: var(--yellow); font-family: "DM Mono", monospace; font-size: 18px; }
+      .dept { color: #c8d7eb; font-size: .77rem; text-align: right; line-height: 1.4; }
+      .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.45fr .9fr; gap: 42px; align-items: end; margin-top: 80px; }
+      .eyebrow, .track { font-family: "DM Mono", monospace; letter-spacing: .12em; font-size: .73rem; text-transform: uppercase; }
+      .eyebrow { color: var(--yellow); }
+      h1 { font-size: clamp(3rem, 8vw, 6.5rem); letter-spacing: -.075em; line-height: .86; margin: 11px 0 18px; }
+      .hero p { max-width: 590px; margin: 0; color: #dbe8f7; font-size: 1.03rem; line-height: 1.7; }
+      .quick-links { display: grid; gap: 10px; }
+      .quick-links a { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border: 1px solid rgba(255,255,255,.27); border-radius: 13px; color: white; text-decoration: none; background: rgba(255,255,255,.08); transition: .2s ease; }
+      .quick-links a:hover { background: rgba(255,255,255,.17); transform: translateY(-2px); }
+      .quick-links span { color: var(--yellow); font-family: "DM Mono", monospace; }
+
+      .stats { margin-top: -25px; position: relative; z-index: 3; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; box-shadow: var(--shadow); background: var(--line); }
+      .stat { padding: 21px 25px; background: white; }
+      .stat strong { display: block; color: var(--navy); font-size: 1.75rem; letter-spacing: -.06em; }
+      .stat span { color: var(--muted); font-size: .78rem; }
+
+      main { padding: 68px 0 78px; }
+      .section-kicker { color: var(--blue); font: 500 .74rem "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
+      h2 { max-width: 720px; margin: 8px 0 18px; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.05; letter-spacing: -.055em; color: var(--navy); }
+      .intro { max-width: 640px; margin: 0; color: var(--muted); line-height: 1.7; }
+
+      .controls { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin: 36px 0 18px; }
+      .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+      .filter { border: 1px solid var(--line); color: #4a5870; padding: 10px 14px; border-radius: 999px; background: white; font-size: .86rem; font-weight: 700; }
+      .filter.active, .filter:hover { border-color: var(--navy); background: var(--navy); color: white; }
+      .search { width: min(330px, 100%); border: 1px solid var(--line); border-radius: 11px; padding: 11px 14px; color: var(--ink); outline-color: var(--blue); background: white; }
+      .timeline { display: grid; gap: 20px; }
+      .time-block { display: grid; grid-template-columns: 165px 1fr; gap: 28px; align-items: start; }
+      .time { position: sticky; top: 15px; padding: 16px 0; border-top: 3px solid var(--navy); }
+      .time strong { display: block; font-size: 1.1rem; color: var(--navy); }
+      .time span { color: var(--muted); font: .73rem "DM Mono", monospace; }
+      .event-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+      .event { border: 1px solid var(--line); border-radius: 15px; background: white; padding: 19px; transition: transform .2s ease, box-shadow .2s ease; }
+      .event:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(19,45,83,.10); }
+      .track { display: inline-block; padding: 5px 8px; border-radius: 5px; color: white; font-size: .62rem; }
+      .technical { background: var(--technical); }
+      .nontechnical { background: var(--nontechnical); }
+      .event h3 { margin: 12px 0 6px; font-size: 1.08rem; letter-spacing: -.03em; color: var(--navy); }
+      .event .sub { min-height: 20px; margin: 0 0 15px; color: var(--muted); font-size: .83rem; }
+      .venue { display: flex; gap: 9px; align-items: flex-start; color: #263b5b; font-size: .84rem; font-weight: 700; }
+      .venue span:last-child::before { content: 'First floor · '; color: var(--blue); }
+      .pin { display: grid; flex: 0 0 auto; place-items: center; width: 21px; height: 21px; border-radius: 50%; background: #e7f1ff; color: var(--blue); font-size: .72rem; }
+      .details { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 15px; border: 0; padding: 0; background: transparent; color: var(--blue); font-size: .82rem; font-weight: 800; text-align: left; }
+      .details span:last-child { font-size: 1.15rem; transition: transform .2s ease; }
+      .event.open .details span:last-child { transform: rotate(45deg); }
+      .event-info { display: none; margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; line-height: 1.6; }
+      .event.open .event-info { display: block; }
+      .break-card { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 108px; padding: 22px; border: 1px dashed #c3cfdf; border-radius: 15px; background: linear-gradient(110deg, #fff 0%, #fff7da 100%); }
+      .break-card strong { display: block; color: var(--navy); font-size: 1.12rem; letter-spacing: -.03em; }
+      .break-card span { color: #695b36; font-size: .84rem; }
+      .break-icon { display: grid; flex: 0 0 auto; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--yellow); color: var(--navy); font-size: 1.3rem; }
+
+      .venues { margin-top: 86px; padding-top: 64px; border-top: 1px solid var(--line); }
+      .venue-layout { display: grid; grid-template-columns: .83fr 1.17fr; gap: 46px; align-items: start; }
+      .venue-note { padding: 24px; border-radius: 16px; background: var(--navy); color: white; }
+      .venue-note p { margin: 0; color: #d7e4f2; font-size: .9rem; line-height: 1.7; }
+      .venue-list { display: grid; gap: 9px; }
+      .venue-row { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+      .venue-num { color: var(--blue); font: .78rem "DM Mono", monospace; }
+      .venue-row strong { color: var(--navy); font-size: .93rem; }
+      .venue-row span { color: var(--muted); font-size: .79rem; }
+      .count { border-radius: 999px; padding: 5px 8px; background: #e9f3ff; color: var(--blue) !important; font: .72rem "DM Mono", monospace; }
+      .empty { display: none; padding: 35px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); text-align: center; }
+      .hidden { display: none !important; }
+      footer { padding: 34px 0; background: #06162b; color: #b9c9dd; font-size: .76rem; }
+      footer .shell { display: flex; justify-content: space-between; gap: 20px; }
+
+      @media (max-width: 760px) {
+        .hero { padding-bottom: 45px; }
+        .hero-grid, .venue-layout, .time-block { grid-template-columns: 1fr; gap: 20px; }
+        .hero-grid { margin-top: 52px; }
+        .dept { display: none; }
+        .stats { grid-template-columns: 1fr; margin-top: -14px; }
+        .stat { padding: 15px 19px; }
+        .controls { align-items: stretch; flex-direction: column; }
+        .search { width: 100%; }
+        .time { position: static; padding-bottom: 0; }
+        .event-grid { grid-template-columns: 1fr; }
+        main { padding-top: 48px; }
+        footer .shell { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="shell">
+        <div class="topbar">
+          <div class="brand"><span class="brand-mark">Z</span> ZYNERA-26</div>
+          <div class="dept">Department of ECE &amp; Electronics Engineering<br />(VLSI Design and Technology)</div>
+        </div>
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Symposium programme &amp; venue guide</div>
+            <h1>Know where<br />to be.</h1>
+            <p>Find every event, its first-floor room, timing and coordinators in one clear programme. Choose a time block or look up a venue before you head out.</p>
+          </div>
+          <nav class="quick-links" aria-label="Quick links">
+            <a href="#schedule">View full programme <span>↓</span></a>
+            <a href="#venues">Browse venues <span>↓</span></a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="shell stats" aria-label="Event summary">
+      <div class="stat"><strong>10</strong><span>Events across two tracks</span></div>
+      <div class="stat"><strong>11:00–3:30</strong><span>Programme hours</span></div>
+      <div class="stat"><strong>1st floor</strong><span>All symposium venues</span></div>
+    </div>
+
+    <main class="shell">
+      <section id="schedule" aria-labelledby="schedule-title">
+        <div class="section-kicker">Today’s programme</div>
+        <h2 id="schedule-title">Your day, arranged by time.</h2>
+        <p class="intro">Use the filters to focus on a track or search by event, room or organiser. Tap “coordinators” for the people to contact at each venue.</p>
+
+        <div class="controls">
+          <div class="filters" aria-label="Event filters">
+            <button class="filter active" data-filter="all">All events</button>
+            <button class="filter" data-filter="technical">Technical</button>
+            <button class="filter" data-filter="nontechnical">Non-technical</button>
+          </div>
+          <input class="search" id="search" type="search" placeholder="Search event or venue" aria-label="Search events or venues" />
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="time-block" data-time="morning">
+            <div class="time"><strong>11:00 AM</strong><span>to 1:00 PM · technical</span></div>
+            <div class="event-grid">
+              <article class="event" data-track="technical" data-search="veridex ppt seminar hall gta hall tech hive pss lab maruthi prema akash nishanth renuka swetharani">
+                <span class="track technical">Technical</span><h3>Veridex (PPT)</h3><p class="sub">Presentation event</p><div class="venue"><span class="pin">⌖</span><span>Seminar Hall / GTA Hall / Tech Hive Hall / PSS Lab</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mrs. D. Maruthi Prema, AP/ECE<br /><strong>Students:</strong> Akash M, Nishanth Kumar R, Renuka Devi T G, Swetharani K K — IV ECE</div>
+              </article>
+              <article class="event" data-track="technical" data-search="60 sec engineer quiz iv eee classroom thirumoorthi mahalakshmi akshaya">
+                <span class="track technical">Technical</span><h3>60 sec Engineer (Quiz)</h3><p class="sub">Quick-fire quiz</p><div class="venue"><span class="pin">⌖</span><span>IV EEE Classroom</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mr. M. Thirumoorthi, AP/ECE<br /><strong>Students:</strong> Mahalakshmi B, Akshaya P — IV ECE</div>
+              </article>
+              <article class="event" data-track="technical" data-search="beyond belief fables to facts ii mech classroom jesudass dhanushri vijayalakshmi">
+                <span class="track technical">Technical</span><h3>Beyond Belief</h3><p class="sub">Fables to Facts</p><div class="venue"><span class="pin">⌖</span><span>II Mech Classroom</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mr. I. Jesudass, AP/VLSI<br /><strong>Students:</strong> Dhanushri A, Vijayalakshmi T B — IV ECE</div>
+              </article>
+              <article class="event" data-track="technical" data-search="comphyst guess the component iii eee classroom lakshmanan nainar sundar arul mercy praisely angel">
+                <span class="track technical">Technical</span><h3>Comphyst</h3><p class="sub">Guess the Component</p><div class="venue"><span class="pin">⌖</span><span>III EEE Classroom</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mr. S. Lakshmanan Nainar Sundar, AP/ECE<br /><strong>Students:</strong> Arul Mercy R, Praisely Angel V — IV ECE</div>
+              </article>
+              <article class="event" data-track="technical" data-search="protova project expo ece lab 1 ezhilmathi malini priya">
+                <span class="track technical">Technical</span><h3>Protova (Project Expo)</h3><p class="sub">Project exhibition</p><div class="venue"><span class="pin">⌖</span><span>ECE Lab 1</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Dr. N. Ezhilmathi, HOD (VLSI)<br /><strong>Students:</strong> Malini R, Priya S — IV ECE</div>
+              </article>
+            </div>
+          </div>
+
+          <div class="time-block" data-break="lunch">
+            <div class="time"><strong>1:00 PM</strong><span>to 2:00 PM · intermission</span></div>
+            <div class="break-card"><div><strong>Lunch break</strong><span>Take a break and return for the non-technical events at 2:00 PM.</span></div><div class="break-icon" aria-hidden="true">☼</div></div>
+          </div>
+
+          <div class="time-block" data-time="afternoon">
+            <div class="time"><strong>2:00 PM</strong><span>to 3:30 PM · non-technical</span></div>
+            <div class="event-grid">
+              <article class="event" data-track="nontechnical" data-search="zapora rapid fire iii eee classroom hemalatha saleem sam paniel">
+                <span class="track nontechnical">Non-technical</span><h3>Zapora (Rapid Fire)</h3><p class="sub">Rapid-fire challenge</p><div class="venue"><span class="pin">⌖</span><span>III EEE Classroom</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mrs. B. K. Hemalatha, HOD (ECE)<br /><strong>Students:</strong> Saleem Irsath S, Sam Paniel L — IV ECE</div>
+              </article>
+              <article class="event" data-track="nontechnical" data-search="brandora adzap tech hive vimalarani deepak karthigai jothi">
+                <span class="track nontechnical">Non-technical</span><h3>Brandora (Adzap)</h3><p class="sub">Advertisement challenge</p><div class="venue"><span class="pin">⌖</span><span>Tech Hive</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mrs. C. I. Vimalarani, AP/ECE<br /><strong>Students:</strong> Deepak Kumar U, Karthigai Jothi S — IV ECE</div>
+              </article>
+              <article class="event" data-track="nontechnical" data-search="synqra connection pss lab sivadharshani ramya prabha monica">
+                <span class="track nontechnical">Non-technical</span><h3>Synqra (Connection)</h3><p class="sub">Connection game</p><div class="venue"><span class="pin">⌖</span><span>PSS Lab</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mrs. A. N. Sivadharshani, AP/ECE<br /><strong>Students:</strong> Ramya Prabha M, Monica S — IV ECE</div>
+              </article>
+              <article class="event" data-track="nontechnical" data-search="sketchron pictionary ii eee classroom jeyabrindha vinitha keerthana">
+                <span class="track nontechnical">Non-technical</span><h3>Sketchron (Pictionary)</h3><p class="sub">Draw and guess</p><div class="venue"><span class="pin">⌖</span><span>II EEE Classroom</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Mrs. F. Jeyabrindha, AP/ECE<br /><strong>Students:</strong> Vinitha S, Keerthana S — IV ECE</div>
+              </article>
+              <article class="event" data-track="nontechnical" data-search="mimoza dumbcharades ece lab 1 sivakumar deepa nithiya">
+                <span class="track nontechnical">Non-technical</span><h3>Mimoza (Dumbcharades)</h3><p class="sub">Silent film charades</p><div class="venue"><span class="pin">⌖</span><span>ECE Lab 1</span></div><button class="details" aria-expanded="false">Coordinators <span>+</span></button><div class="event-info"><strong>Staff:</strong> Dr. N. Sivakumar, AP/ECE<br /><strong>Students:</strong> Deepa S, Nithiya T — IV ECE</div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="empty" id="empty">No matching event yet. Try a room name, event or coordinator.</div>
+      </section>
+
+      <section class="venues" id="venues" aria-labelledby="venue-title">
+        <div class="venue-layout">
+          <div>
+            <div class="section-kicker">Venue finder · first floor</div>
+            <h2 id="venue-title">Find your room before the rush.</h2>
+            <div class="venue-note"><p>All symposium venues are on the first floor. Some locations host more than one event; select an event above to see its exact time and coordinator team.</p></div>
+          </div>
+          <div class="venue-list">
+            <div class="venue-row"><span class="venue-num">01</span><div><strong>ECE Lab 1</strong><br /><span>Project Expo · Dumbcharades</span></div><span class="count">2 events</span></div>
+            <div class="venue-row"><span class="venue-num">02</span><div><strong>III EEE Classroom</strong><br /><span>Guess the Component · Rapid Fire</span></div><span class="count">2 events</span></div>
+            <div class="venue-row"><span class="venue-num">03</span><div><strong>Tech Hive</strong><br /><span>Veridex · Adzap</span></div><span class="count">2 events</span></div>
+            <div class="venue-row"><span class="venue-num">04</span><div><strong>PSS Lab</strong><br /><span>Veridex · Connection</span></div><span class="count">2 events</span></div>
+            <div class="venue-row"><span class="venue-num">05</span><div><strong>Seminar Hall / GTA Hall</strong><br /><span>Veridex (PPT)</span></div><span class="count">1 event</span></div>
+            <div class="venue-row"><span class="venue-num">06</span><div><strong>IV EEE Classroom</strong><br /><span>60 sec Engineer</span></div><span class="count">1 event</span></div>
+            <div class="venue-row"><span class="venue-num">07</span><div><strong>II Mech Classroom</strong><br /><span>Beyond Belief</span></div><span class="count">1 event</span></div>
+            <div class="venue-row"><span class="venue-num">08</span><div><strong>II EEE Classroom</strong><br /><span>Sketchron</span></div><span class="count">1 event</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="shell"><span>ZYNERA-26 · Academic Year 2026–27 (Odd Semester)</span><span>Department of ECE &amp; Electronics Engineering (VLSI Design and Technology)</span></div></footer>
+    <script>
+      const buttons = document.querySelectorAll('.filter');
+      const events = document.querySelectorAll('.event');
+      const blocks = document.querySelectorAll('.time-block');
+      const search = document.getElementById('search');
+      const empty = document.getElementById('empty');
+      let selected = 'all';
+
+      function filterEvents() {
+        const term = search.value.trim().toLowerCase();
+        let shown = 0;
+        events.forEach(event => {
+          const trackOK = selected === 'all' || event.dataset.track === selected;
+          const searchOK = !term || event.dataset.search.includes(term);
+          const visible = trackOK && searchOK;
+          event.classList.toggle('hidden', !visible);
+          if (visible) shown++;
+        });
+        blocks.forEach(block => {
+          if (!block.dataset.break) block.classList.toggle('hidden', !block.querySelector('.event:not(.hidden)'));
+        });
+        empty.style.display = shown ? 'none' : 'block';
+      }
+
+      buttons.forEach(button => button.addEventListener('click', () => {
+        selected = button.dataset.filter;
+        buttons.forEach(item => item.classList.toggle('active', item === button));
+        filterEvents();
+      }));
+      search.addEventListener('input', filterEvents);
+      document.querySelectorAll('.details').forEach(button => button.addEventListener('click', () => {
+        const card = button.closest('.event');
+        const opening = !card.classList.contains('open');
+        card.classList.toggle('open', opening);
+        button.setAttribute('aria-expanded', opening);
+      }));
+    </script>
+  </body>
+</html>
